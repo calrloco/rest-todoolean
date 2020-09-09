@@ -9,14 +9,14 @@
     background: url('https://svgshare.com/i/PTa.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: right;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
 }
 .to-do_container{
-    flex: 0 1 35%;
+    flex: 0 1 50%;
     height: auto;
     background-color:#5c0099;
     display: flex;
