@@ -21,7 +21,7 @@ $(document).ready(function () {
   /// inserisci
   $(".invia").click(invia);
   /// keypress
-  $(document).on("keypress", function (e) {
+  $(document).on("keydown", function (e) {
     if (e.which == 13) {
       invia();
     }
