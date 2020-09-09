@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // READ get
   getData();
   //// elimina
   $(document).on("click", ".elimina", function () {
@@ -15,9 +16,12 @@ $(document).ready(function () {
   });
   /// inserisci
   $(".invia").click(function () {
-    var item = $(".input").val();
+    var item = $(".input-top").val();
     console.log(item);
     insert(item);
+  });
+  $(document).on('click','.item',function(){
+     $(this).siblings('.input_modifica').removeClass('hidden');
   });
 });
 /// chiamta api per ottenere la lista
