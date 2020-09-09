@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    padding: 50px 20px 50px 20px;
+    padding: 50px 40px 50px 40px;
     color: #fff;
 }
 .send{
@@ -89,7 +89,7 @@ input{
     transform: scale(1);
 }
 .datas_item{
-    background-color: #510087;
+    background-color: #6200b3;
     margin-bottom: 10px;
     border-radius: 10px;
     cursor: pointer;

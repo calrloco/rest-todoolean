@@ -10,7 +10,6 @@ $(document).ready(function () {
   ///PUT UPDATE
   $(document).on("click", ".modifica", function () {
     var id = $(this).parent().attr("data-id");
-    if($(".input_modifica").val()!= "")
     var valore = $(".input_modifica").val();
     console.log(valore);
     modificadato(id, valore);
