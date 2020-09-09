@@ -4,26 +4,28 @@
     box-sizing: border-box;
 }
 .container{
-    min-width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
-    background: url('https://svgshare.com/i/PTa.svg');
-    background-size: contain;
+    background: url('https://svgshare.com/i/PV1.svg');
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: bottom;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     font-family: 'Montserrat', sans-serif;
 }
 .to-do_container{
     flex: 0 1 50%;
+    transform: translateX(-2%);
     height: auto;
-    background-color:#5c0099;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    padding: 50px 40px 50px 40px;
+    padding: 50px 50px 50px 50px;
     color: #fff;
+    margin-right: 30px;
+    margin-top: 20px;
 }
 .send{
     display: flex;
@@ -76,6 +78,8 @@ input{
   border: none;
   outline: none;
   cursor: pointer;
+  border-radius: 5px;
+ padding-left: 15px;
 }
 .item{
     cursor: pointer;
@@ -106,4 +110,13 @@ input{
 }
 .nascosto{
     display: none;
+}
+.bg-1{
+    width: 80vw;
+    height: 10vh;
+    position: absolute;
+    background-color: red;
+    top: -10%;
+    left: 0;
+    clip-path: circle();
 }
