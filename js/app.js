@@ -11,8 +11,11 @@ $(document).ready(function () {
   $(document).on("click", ".modifica", function () {
     var id = $(this).parent().attr("data-id");
     var input = $(this).siblings(".input_modifica");
+    var lettersNumber = /^[0-9a-zA-Z]+$/;
     var valore = input.val();
-    modificadato(id, valore);
+    if (valore.match(lettersNumber)) {
+      modificadato(id, valore);
+    }
   });
 
   /// inserisci
