@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.to-do_container{
+    flex: 0 1 50%;
+    height: 50vh;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+}
+.datas{
+    background-color: blueviolet;
+    list-style: none;
+    flex: 0 1 50%;
+}
+.datas_item{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
