@@ -42,6 +42,7 @@ function invia() {
   var item = $(".input-top").val();
   if (item.match(lettersNumber)) {
     insert(item);
+    $(".input-top").val("");
   }
 }
 function getData() {
