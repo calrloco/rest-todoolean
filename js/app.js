@@ -10,8 +10,8 @@ $(document).ready(function () {
   ///PUT UPDATE
   $(document).on("click", ".modifica", function () {
     var id = $(this).parent().attr("data-id");
-    var valore = $(".input_modifica").val();
-    console.log(valore);
+    var input = $(this).siblings(".input_modifica");
+    var valore = input.val();
     modificadato(id, valore);
   });
 
@@ -35,9 +35,11 @@ $(document).ready(function () {
 });
 /// chiamta api per ottenere la lista
 function invia() {
+  var lettersNumber = /^[0-9a-zA-Z]+$/;
   var item = $(".input-top").val();
-  console.log(item);
-  insert(item);
+  if (item.match(lettersNumber)) {
+    insert(item);
+  }
 }
 function getData() {
   $.ajax({
