@@ -10,24 +10,32 @@ $(document).ready(function () {
   ///PUT UPDATE
   $(document).on("click", ".modifica", function () {
     var id = $(this).parent().attr("data-id");
-    var valore = $('.input_modifica').val();
+    if($(".input_modifica").val()!= "")
+    var valore = $(".input_modifica").val();
     console.log(valore);
-    modificadato(id,valore);
+    modificadato(id, valore);
   });
+
   /// inserisci
   $(".invia").click(invia);
   /// keypress
-  $(document).on('keypress',function(e) {
-    if(e.which == 13) {
-        invia();
+  $(document).on("keypress", function (e) {
+    if (e.which == 13) {
+      invia();
     }
-})
-  $(document).on('click','.item',function(){
-     $(this).siblings('.input_modifica').removeClass('hidden');
+  });
+  $(document).on("click", ".datas_item", function () {
+    $(this).children(".input_modifica").removeClass("hidden");
+    $(this).children(".modifica").removeClass("nascosto");
+  });
+  // doppio click rimuove l'imput di modifica
+  $(document).on("dblclick", ".datas_item", function () {
+    $(this).children(".input_modifica").addClass("hidden");
+    $(this).children(".modifica").addClass("nascosto");
   });
 });
 /// chiamta api per ottenere la lista
-function invia(){
+function invia() {
   var item = $(".input-top").val();
   console.log(item);
   insert(item);
@@ -60,12 +68,12 @@ function cancella(id) {
     },
   });
 }
-function modificadato(id,input) {
+function modificadato(id, input) {
   $.ajax({
     url: "http://157.230.17.132:3004/todos/" + id,
     method: "PUT",
-    data:{
-        text:input,
+    data: {
+      text: input,
     },
     success: function () {
       $(".datas").empty();

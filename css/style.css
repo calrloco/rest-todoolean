@@ -57,9 +57,13 @@ input,input:focus{
 .input_modifica{
     width:  70%;
     transition: all .2s;
+    padding: 5px;
+    border-radius: 5px;
 }
 .hidden{
     width: 0;
+    padding: 0px;
+    border-radius: 0px;
 }
 button,
 input{
@@ -71,6 +75,7 @@ input{
   background-color: #fdc500;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .item{
     cursor: pointer;
@@ -103,4 +108,7 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.nascosto{
+    display: none;
 }
