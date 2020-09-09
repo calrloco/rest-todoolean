@@ -17,12 +17,11 @@ $(document).ready(function () {
       modificadato(id, valore);
     }
   });
-
   /// inserisci
   $(".invia").click(invia);
   /// keypress
   $(document).on("keydown", function (e) {
-    if (e.which == 13) {
+    if (e.which == 13 && $(".input-top").is(":focus")) {
       invia();
     }
   });
