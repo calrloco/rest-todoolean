@@ -15,16 +15,23 @@ $(document).ready(function () {
     modificadato(id,valore);
   });
   /// inserisci
-  $(".invia").click(function () {
-    var item = $(".input-top").val();
-    console.log(item);
-    insert(item);
-  });
+  $(".invia").click(invia);
+  /// keypress
+  $(document).on('keypress',function(e) {
+    if(e.which == 13) {
+        invia();
+    }
+})
   $(document).on('click','.item',function(){
      $(this).siblings('.input_modifica').removeClass('hidden');
   });
 });
 /// chiamta api per ottenere la lista
+function invia(){
+  var item = $(".input-top").val();
+  console.log(item);
+  insert(item);
+}
 function getData() {
   $.ajax({
     url: "http://157.230.17.132:3004/todos",

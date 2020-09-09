@@ -68,6 +68,9 @@ input{
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
   border: none;
+  background-color: #fdc500;
+  border: none;
+  outline: none;
 }
 .item{
     cursor: pointer;
