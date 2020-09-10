@@ -20,7 +20,7 @@ $(document).ready(function () {
   $(".invia").click(invia);
   /// keypress
   $(document).on("keydown", function (e) {
-    if (e.which == 13 && $(".input-top").is(":focus")) {
+    if (e.which == 13 || e.keyCode == 13 && $(".input-top").is(":focus")) {
       invia();
     }
   });
