@@ -4,7 +4,6 @@ $(document).ready(function () {
   //// elimina
   $(document).on("click", ".elimina", function () {
     var id = $(this).parent().attr("data-id");
-    console.log(id);
     cancella(id);
   });
   ///PUT UPDATE
