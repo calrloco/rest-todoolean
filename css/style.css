@@ -90,11 +90,14 @@ input{
 .datas_item{
     background-color: #6200b3;
     margin-bottom: 10px;
-    border-radius: 10px;
     cursor: pointer;
+    font-size: 20px;
 }
 .datas_item:hover{
     transform: scale(1.1);
+}
+.datas_item:active{
+    transform: scale(1);
 }
 .modifica,.elimina{
     margin-left: 10px;
@@ -110,13 +113,4 @@ input{
 }
 .nascosto{
     display: none;
-}
-.bg-1{
-    width: 80vw;
-    height: 10vh;
-    position: absolute;
-    background-color: red;
-    top: -10%;
-    left: 0;
-    clip-path: circle();
 }
