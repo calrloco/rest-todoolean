@@ -60,7 +60,7 @@ function cancella(id) {
   $.ajax({
     url: "http://157.230.17.132:3004/todos/" + id,
     method: "DELETE",
-    success: function (risposta) {
+    success: function () {
       $(".datas").empty();
       getData();
     },
