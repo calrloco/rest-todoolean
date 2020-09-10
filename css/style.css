@@ -96,9 +96,6 @@ input{
 .datas_item:hover{
     transform: scale(1.1);
 }
-.datas_item:active{
-    transform: scale(1);
-}
 .modifica,.elimina{
     margin-left: 10px;
 }
